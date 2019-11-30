@@ -1,0 +1,15 @@
+.sidebar_item{
+ line-height: 1;
+ margin: 50px 0px;
+}
+
+.sidebar_item > div{
+ font-size: 40px;
+ margin: 10px 0px;
+}
+.sidebar_item >div,span{
+ color: #848484;
+}
+.sidebar_item > span{
+ font-size: 15px;
+}

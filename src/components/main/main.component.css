@@ -1,0 +1,16 @@
+.main{
+ width: 100%;
+ 
+}
+.main{
+ display:flex;
+}
+.main-body{
+ background-color: #f4f4f4;
+ height: max-content;
+ padding: 5px 40px;
+ box-sizing: border-box;
+}
+.main-container{
+ flex-grow: 1;
+}

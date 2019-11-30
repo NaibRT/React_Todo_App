@@ -1,0 +1,9 @@
+.sidebar{
+ flex-grow: 0;
+ box-shadow: -1px 0px 7px 0px #848484;
+ z-index: 1;
+}
+.sidebar > ul{
+ list-style-type: none;
+ padding: 0px;
+}

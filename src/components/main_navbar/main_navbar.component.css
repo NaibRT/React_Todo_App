@@ -1,0 +1,22 @@
+.main-navbar{
+ height: 100px;
+ box-sizing: border-box;
+ /* padding-top: 30px; */
+ display: flex;
+ align-content: center;
+}
+.main-navbar > .main-header-navbar > ul{
+list-style-type: none;
+display: flex;
+width: 100%;
+padding-left: 0px;
+margin: 0px;
+}
+
+.main-header-navbar{
+ display: flex;
+align-self: center;
+}
+.main-navbar-title{
+ align-self: center;
+}

@@ -1,0 +1,12 @@
+.form-container{
+ box-sizing: border-box;
+ padding: 40px 20px;
+ background-color: white;
+ border-radius: 10px;
+ margin: 0px 40px;
+}
+
+.col{
+ padding: 0px 10px;
+}
+

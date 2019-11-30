@@ -1,0 +1,33 @@
+.form-input{
+ display: inline-block;
+ margin-bottom: 20px;
+ width: 100%;
+ }
+ .form-input > label{
+  display: block;
+  text-align: left;
+  height: 25px;
+ }
+ .form-input > input,select{
+ border: 2px solid #c8c6c5;
+ border-radius: 4px;
+ font-size: initial;
+ text-align: initial;
+ padding-left: 10px;
+ width: 100%;
+ box-sizing: border-box;
+ }
+ 
+ .form-input > select{
+  background-color: white;
+  overflow-y: scroll;
+  height: 45px;
+ }
+ .form-input > select >option{
+  height: 40px !important;
+  color:grey !important;
+  background: white !important;
+ }
+ .form-input > select > option:hover{
+     background-color: aqua !important;
+ }

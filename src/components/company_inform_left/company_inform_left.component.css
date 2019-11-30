@@ -1,0 +1,60 @@
+.inform-left{
+ background-color: white;
+ height: 530px;
+ box-sizing: border-box;
+ padding: 0px 45px;
+ border-radius: 10px;
+}
+
+
+/* .form-input{
+ display: inline-block;
+ margin-bottom: 20px;
+ width: 100%;
+ }
+ .form-input > label{
+  display: block;
+  text-align: left;
+  height: 25px;
+ }
+ .form-input > input,select{
+ border: 2px solid #c8c6c5;
+ height: 36px;
+ border-radius: 4px;
+ font-size: initial;
+     text-align: initial;
+     padding-left: 10px;
+     width: 100%;
+ }
+ 
+ .form-input > select{
+  background-color: white;
+  height: 44px;
+  overflow-y: scroll;
+ }
+ .form-input > select >option{
+  height: 40px !important;
+  color:grey !important;
+  background: white !important;
+ }
+ .form-input > select > option:hover{
+     background-color: aqua !important;
+ } */
+ 
+ .company-logo{
+    width: 140px;
+    height: 140px;
+    border-radius: 85px;
+    font-size: 70px;
+    background-color: #55ab80;
+    text-align: center;
+    line-height: 2;
+    margin-top: 40px;
+    color: white;
+    display: inline-block;
+ }
+
+
+
+
+

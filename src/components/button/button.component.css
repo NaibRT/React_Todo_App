@@ -1,0 +1,26 @@
+.btn{
+ border-radius: 3px;
+ border: 0px;
+ cursor: pointer;
+ padding: 10px 15px;
+ text-align: center;
+}
+
+
+
+.btn-primary{
+ background-color: #0047ba;
+ border-color: #0047ba;
+ color: white;
+}
+.btn-default{
+background-color: #e5e5e5;
+color: #848484;
+}
+
+.btn-danger{
+ background-color: red;
+ border-color: red;
+ color: white;
+}
+
