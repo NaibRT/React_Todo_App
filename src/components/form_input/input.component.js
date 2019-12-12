@@ -7,6 +7,7 @@ function Input(props)  {
         <div className='form-input'>
         <label>{props.label}</label>
         <input 
+          placeholder={props.placeholder}
           onChange={props.onChange} 
            style={props.style} 
            type={props.type} 

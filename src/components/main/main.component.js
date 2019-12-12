@@ -18,7 +18,7 @@ class main extends Component {
                   <MainNavbar />
                   <div className='main-body'>
                      <Switch>
-                        <Route path='/Şirkət-Məlumatlari' exact component={AboutCompony}/>
+                        <Route path='/' exact component={AboutCompony}/>
                         <Route path='/Məhsul-Kateqoriyası' component={ProductCategory}/>
                         <Route path='/Fəaliyyət-Sahələri' component={ActivityInform}/>
                      </Switch>

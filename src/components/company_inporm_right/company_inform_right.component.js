@@ -16,6 +16,7 @@ class CompanyInformRight extends Component {
         <div style={{'display':'flex','justifyContent':'space-evenly','margin':'40px 0px'}}>
         <div className='col col-6'>
           <Input onChange={this.context.onChangeHandlers.phoneOnChangeHandler} style={{'height':'45px'}} type='phone' name='phone' value={this.context.state.Company.phone} label='Telefon' />
+          <SelectBox onChange={this.context.onChangeHandlers.districtOnChangeHandler} name='district' label='Rayon' value={this.context.state.Company.district} data={this.context.state.distrincts} />
           <Input onChange={this.context.onChangeHandlers.createdDayOnChangeHandler} style={{'height':'45px'}} type='date' name='cday' value={this.context.state.Company.createdDate} label='Yaranma İli' />
           <Input onChange={this.context.onChangeHandlers.siteOnChangeHandler} style={{'height':'50px'}} type='text' name='site' value={this.context.state.Company.site} label='İnternet Saytı' />
         </div>

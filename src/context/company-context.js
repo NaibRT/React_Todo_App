@@ -90,6 +90,24 @@ class CompanyContext extends Component {
     }));
    }
 
+   districtOnChangeHandler=(e)=>{
+    let value=e.currentTarget.value
+    console.log(value)
+    this.setState((prevState)=>({
+      Company:{
+        ...prevState.Company,
+        district:value
+      },
+
+      sectors:[...prevState.sectors],
+      areas:[...prevState.areas],
+      distrincts:[...prevState.distrincts],
+      cities:prevState.cities,
+      countries:[...prevState.countries],
+      employeeCounts:prevState.employeeCounts
+    }));
+   }
+
   createdDayOnChangeHandler=(e)=>{
     let value=e.currentTarget.value
     this.setState((prevState)=>({
@@ -282,7 +300,43 @@ delegateOnChangeHandler=(e)=>{
 }
 
 
+detailOnChangeHandler=(e)=>{
+  console.log(e.currentTarget.value);
+   let value=e.currentTarget.value;
+    let id=e.currentTarget.id;
+    let areasList=this.state.areas;
+    areasList.forEach(x=>{
+      if(x.id===id){
+        x.detail=value;
+      }
+    });
+    this.setState((prevState)=>({
+      Company:{...prevState.Company},
+      sectors:[...prevState.sectors],
+      areas:areasList,
+      distrincts:[...prevState.distrincts],
+      cities:[...prevState.cities],
+      countries:[...prevState.countries],
+      employeeCounts:[...prevState.employeeCounts]
+    }));
+}
 
+sectorOnChangeHandler=(e)=>{
+  console.log(e.currentTarget)
+  // this.setState((prevState)=>({
+  //   Company:{
+  //     ...prevState.Company,
+  //     branch:value
+  //   },
+
+  //   sectors:[...prevState.sectors],
+  //   areas:[...prevState.areas],
+  //   distrincts:[...prevState.distrincts],
+  //   cities:prevState.cities,
+  //   countries:[...prevState.countries],
+  //   employeeCounts:prevState.employeeCounts
+  // }));
+}
 
 
 
@@ -293,7 +347,11 @@ delegateOnChangeHandler=(e)=>{
       headers: {
         'Content-Type': 'application/json;charset=utf-8'
       },
-      body: JSON.stringify({Company:this.state.Company,sectors:this.state.sectors,areas:this.state.areas,employeeCounts:this.state.employeeCounts})
+      body: JSON.stringify(
+        {Company:this.state.Company,
+          sectors:this.state.sectors,
+          areas:this.state.areas,
+          employeeCounts:this.state.employeeCounts})
     }).then(async (res)=>{
       let result= await res.json();
       console.log(result)
@@ -377,7 +435,7 @@ getEmployeeCounts=()=>{
 
 
  
-getCompanyData(){
+getCompanyData=()=>{
   fetch('http://localhost:9597/company')
   .then(async (res)=>{
      let data=await res.json();
@@ -411,10 +469,13 @@ removeDetail=(e)=>{
     countries:[...prevState.countries],
     employeeCounts:[...prevState.employeeCounts]
   }),()=>{
-     console.log(this.state.areas)
     this.UpdateonClickHandler();
   });
 }
+
+
+
+
 
 componentDidMount(){
   this.getDistricts();
@@ -434,6 +495,7 @@ componentDidMount(){
           bdayOnChangeHandler:this.bdayOnChangeHandler,
           voenOnChangeHandler:this.voenOnChangeHandler,
           phoneOnChangeHandler:this.phoneOnChangeHandler,
+          districtOnChangeHandler:this.districtOnChangeHandler,
           createdDayOnChangeHandler:this.createdDayOnChangeHandler,
           siteOnChangeHandler:this.siteOnChangeHandler,
           emailOnChangeHandler:this.emailOnChangeHandler,
@@ -445,6 +507,8 @@ componentDidMount(){
           brancOnChangeHandler:this.brancOnChangeHandler,
           importOnChangeHandler:this.importOnChangeHandler,
           delegateOnChangeHandler:this.delegateOnChangeHandler,
+          detailOnChangeHandler:this.detailOnChangeHandler,
+          sectorOnChangeHandler:this.sectorOnChangeHandler
         },
         UpdateonClickHandler:this.UpdateonClickHandler,
         removeDetail:this.removeDetail

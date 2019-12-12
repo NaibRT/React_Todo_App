@@ -21,7 +21,7 @@ render(){
          </div>
        <div className='col-9 main-header-navbar'>
        <ul>
-       <MainHeaderItem to='/Şirkət-Məlumatlari' className='active'>Srket Melimatlari</MainHeaderItem>
+       <MainHeaderItem to='/' className='active'>Srket Melimatlari</MainHeaderItem>
        <MainHeaderItem to='/Məhsul-Kateqoriyası'>Mehsul Kategoriyasi</MainHeaderItem>
        <MainHeaderItem to='/Fəaliyyət-Sahələri'>Fealiyyet Sheleri</MainHeaderItem>
        </ul>
@@ -34,3 +34,7 @@ render(){
 }
 
 export default MainNavbar
+
+
+
+

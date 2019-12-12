@@ -19,7 +19,6 @@ class CategoryContainer extends Component {
 
   
   render() {
-    console.log(this.context.state.Company)
     let items = this.context.state.sectors.map((item, index) => {
       return <SectorItem  onClick={this.props.sectorClick} key={index} isActive={index === this.state.activeIndex} className='sectorItem' name={item.name} id={item.id} />
     })
